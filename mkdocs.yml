@@ -1,0 +1,73 @@
+site_name: Universidad UCINF
+site_description: Sitio de memoria Institucional y encuentro para exalumnos de la Universidad Ciencias de la Informatica.
+site_url: https://www.ucinf.cl
+
+repo_url: https://github.com/ucinf-cl/ucinf-cl
+repo_name: ucinf-cl/ucinf-cl
+
+theme:
+  name: material
+  language: es
+  logo: assets/images/ucinf_logo.png
+  favicon: assets/images/favicon.ico
+  palette:
+    primary: custom
+  font:
+    text: Noto Sans
+    code: Roboto Mono
+  edit_uri: edit/main/docs/
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - toc.integrate
+    - navigation.top
+    - content.action.edit
+    - content.code.copy
+
+nav:
+  - Universidad: 
+    - universidad/index.md
+    - Colaboradores: colaboradores.md
+    - Historia: historia.md
+  - Alumni: alumni.md
+  - Blog:
+    - blog/index.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - privacy
+  - blog:
+      authors_profiles: true
+      authors_profiles_name: "Autores"
+      authors_profiles_url_format: "autor/{slug}"
+      authors_profiles_pagination: false
+      pagination_url_format: "p/{page}"
+      pagination_if_single_page: true
+      draft: true
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: >-
+  Sitio de memoria institucional y encuentro para la comunidad de exalumnos de UCINF.
+
+extra:
+  analytics:
+    provider: google
+    property: GTM-PXQQB763
